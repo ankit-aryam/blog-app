@@ -1,4 +1,4 @@
-package com.example.blog.Dto;
+package com.example.blog.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,10 +9,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class RegisterRequest {
-
-    private String name;
-    private String email;
-    private String password;
-
+public class JwtResponse {
+    private String token;
+    private String userName;
+    private String role;
 }

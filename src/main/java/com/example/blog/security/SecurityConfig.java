@@ -1,5 +1,4 @@
-package com.example.blog.Security;
-import com.example.blog.Security.JwtFilter;
+package com.example.blog.security;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

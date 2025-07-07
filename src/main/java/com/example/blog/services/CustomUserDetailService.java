@@ -1,6 +1,6 @@
-package com.example.blog.Services;
-import com.example.blog.Entity.UserEntity;
-import com.example.blog.Repository.UserRepository;
+package com.example.blog.services;
+import com.example.blog.entity.UserEntity;
+import com.example.blog.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

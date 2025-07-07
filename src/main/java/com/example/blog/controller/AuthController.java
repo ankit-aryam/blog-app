@@ -1,13 +1,13 @@
-package com.example.blog.Controller;
+package com.example.blog.controller;
 
-import com.example.blog.Dto.JwtResponse;
-import com.example.blog.Dto.LoginRequest;
-import com.example.blog.Dto.RegisterRequest;
-import com.example.blog.Entity.UserEntity;
-import com.example.blog.Repository.RoleRepository;
-import com.example.blog.Repository.UserRepository;
-import com.example.blog.Security.JwtHelper;
-import com.example.blog.Services.CustomUserDetailService;
+import com.example.blog.dto.JwtResponse;
+import com.example.blog.dto.LoginRequest;
+import com.example.blog.dto.RegisterRequest;
+import com.example.blog.entity.UserEntity;
+import com.example.blog.repository.RoleRepository;
+import com.example.blog.repository.UserRepository;
+import com.example.blog.security.JwtHelper;
+import com.example.blog.services.CustomUserDetailService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -16,8 +16,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 
 @RestController

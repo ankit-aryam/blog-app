@@ -1,5 +1,4 @@
-package com.example.blog.Security;
-import com.example.blog.Security.JwtHelper;
+package com.example.blog.security;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -25,7 +24,7 @@ public class JwtFilter extends OncePerRequestFilter {
     protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
         String path = request.getRequestURI();
         // ✅ Don’t apply filter on these public endpoints
-        System.out.println("JWT Filter checking path: " + path);
+        //System.out.println("JWT Filter checking path: " + path);
 
         return path.startsWith("/api/auth/");
     }

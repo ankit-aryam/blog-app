@@ -1,4 +1,4 @@
-package com.example.blog.Entity;
+package com.example.blog.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
