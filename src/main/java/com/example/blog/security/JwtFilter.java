@@ -26,7 +26,9 @@ public class JwtFilter extends OncePerRequestFilter {
         // ✅ Don’t apply filter on these public endpoints
         //System.out.println("JWT Filter checking path: " + path);
 
-        return path.startsWith("/api/auth/");
+        return path.startsWith("/api/auth/")
+                || path.startsWith("/v3/api-docs")
+                || path.startsWith("/swagger-ui");
     }
 
     @Override
