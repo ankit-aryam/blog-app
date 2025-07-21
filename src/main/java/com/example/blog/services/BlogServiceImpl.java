@@ -7,6 +7,7 @@ import com.example.blog.entity.UserEntity;
 import com.example.blog.repository.BlogRepository;
 import com.example.blog.utils.UserUtils;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -47,7 +48,9 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
+    @Cacheable(value = "blogPosts")
     public List<BlogResponse> getAllBlogs(){
+        System.out.println("Fetching data from db");
         return blogRepository.findAll().stream().map(blog -> BlogResponse.builder()
                 .id(blog.getId())
                 .title(blog.getTitle())
